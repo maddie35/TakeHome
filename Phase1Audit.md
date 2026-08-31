@@ -1,4 +1,4 @@
-# Docs audit: Skills, Plugins, and Connectors
+# Phase 1 - Audit: Skills, Plugins, and Connectors
 
 ## Summary
 
