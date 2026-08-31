@@ -75,7 +75,17 @@ This page answers the question a user has before they know which type they need.
 
 **Fix:** sentence case throughout. Establish tilting convention, i.e., task titles start with a present-tense verb.
 
-### g. Prerequisites are formatted three ways
+### g. Titles longer than necessary
+
+Some titles use more words than needed:
+- "What should I build: MCP, plugin, or both?" —> "What to build" conveys the same thing.
+- "When to use desktop vs remote" —> "Desktop vs remote" conveys the same thing.
+
+**Why it matters:** titles are scanned, not read. Every extra word is one more the reader processes before deciding whether the section is theirs. The same applies to retrieval: a concise, descriptive title is a better match for a query than a conversational one. As Kevin from The Office put it, "Why waste time say lot word, few word do trick."
+
+**Fix:** section titles are descriptive but brief. Article titles run two to three words, five maximum.
+
+### h. Prerequisites formatted three ways
 
 - "Enterprise Managed Auth for connectors": complete sentences with an intro line.
 - "Get started with connectors": brief phrases, no intro.
@@ -85,7 +95,7 @@ This page answers the question a user has before they know which type they need.
 
 **Fix:** one heading name, one format, specified in the template.
 
-### h. "Get started with connectors" calls itself a tutorial
+### i. "Get started with connectors" calls itself a tutorial
 
 The intro refers to the article as a tutorial and includes a "What you'll learn" list.
 
@@ -93,7 +103,7 @@ The intro refers to the article as a tutorial and includes a "What you'll learn"
 
 **Fix:** rewrite the intro along the lines of "This guide walks you through setting up and using Claude's connector integrations to enhance your workflow," and drop the list unless user data supports keeping it — in which case apply it everywhere.
 
-### i. "Desktop extensions" is mostly context in a section of task pages
+### j. "Desktop extensions" is mostly context in a section of task pages
 
 The page is conceptual where the other articles in the section are more procedural. Also, its closing "Getting started" section has only 1 hyperlink.
 
@@ -103,7 +113,7 @@ The page is conceptual where the other articles in the section are more procedur
 
 ## P2 — Polish
 
-### j. Ordered lists used for non-sequential content
+### k. Ordered lists used for non-sequential content
 
 Numbered lists sometimes appear where unordered lists should be used, for example, under Desktop extensions > Enterprise deployment.
 
@@ -111,7 +121,7 @@ Numbered lists sometimes appear where unordered lists should be used, for exampl
 
 **Fix:** ordered lists only for sequential steps.
 
-### k. Individual steps carry too much text
+### l. Individual steps carry too much text
 
 In Remote MCP, step 2 under "Adding a request header" runs long enough that scanning users skip it, despite containing information they need.
 
