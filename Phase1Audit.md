@@ -186,44 +186,38 @@ No pages should be deleted outright. Three merges:
 
 ## What it would take to get there
 
-**Phase 0 — Establish the baseline.** Collect and analyze docs metrics and support tickets. Map all site content against the proposed tree to find pages with no clear home. This phase determines whether the structure above survives contact with the full inventory.
+**Phase 0 — Establish the baseline.** Collect and analyze docs metrics and support tickets. Map all site content against the proposed tree to find pages with no clear home, and adjust information architecture as needed.
 
-**Phase 1 — Content fixes with no URL changes.** Title case and verb tense, prerequisites format, list types, the "Get started" intro rewrite, the Remote MCP callout.
+**Phase 1 — Minor content fixes with no URL changes.** Title case and verb tense, prerequisites format, list types, the "Get started" intro rewrite, the Remote MCP callout.
 
-**Phase 2 — Additive changes.** Merge sections within pages, add the Glossary and the Reference shell. Still no URLs move.
+**Phase 2 — Larger fixes with no URL changes.** Merge sections within pages, add the Glossary and the Reference shell. 
 
-**Phase 3 — The restructure.** Merged and moved pages with one-to-one redirect mapping.
-
-Running the cheap phases first delivers visible improvement before anyone is asked to approve URL churn.
-
-**Running alongside:** create custom templates in Mintlify and establish enforcement, since a template without a mechanism is a suggestion. Confirm stakeholders for anything touching navigation config, redirects, or renamed anchors that other teams may have linked to.
+**Phase 3 — Restructure.** Merge and move pages with one-to-one redirect mapping. Add new pages as needed (e.g., Glossary). Create custom templates in Mintlify and establish enforcement. Confirm stakeholders for anything touching navigation config, redirects, or renamed anchors that other teams may have linked to.
 
 ---
 
 ## What I would measure
 
-Each of these is captured before the work starts and compared after.
+For each of these, measure before the work starts and after it finishes to compare:
 
 ### Retrieval quality (AEO)
 
 - Test retrieval on 10 or more questions, scored on accuracy and completeness of the answer.
-- Track MCP searches. Mintlify reports what AI agents query and where they fail to find answers, so this is a direct before-and-after comparison.
+- Track MCP searches. Mintlify tracks this, including where AI agents fail to find answers, so this is a direct before-and-after comparison.
 
 ### Search behavior
 
-- Search queries, click-through rate on results, and AI responses.
-- Named predictions rather than general monitoring. Queries for "limits" and "timeout" currently return nothing useful because the content is headed "Technical specifications." Those queries should resolve once the block moves to Reference and is renamed.
-- Mintlify tracks these and forwards events to configured analytics integrations, so the querying happens wherever those events already land.
+- Measure search queries, click-through rate (CTR) on search results, and AI responses.
+- Choose specific queries to measure, such as searches for "limits" and "timeout", and what we expect to happen (e.g., those searches should start resolving once the Technical specifications block moves to Reference and is renamed).
+- Mintlify analytics tracks each of those, so we can review results in Mintlify, export to Google Sheets, or connect to analytics integration like Google Analytics. 
 
 ### Support tickets
 
-- Volume and question type for tickets tied to connector setup, not total volume.
-- Export by category for the target window. At Affirm we used Zendesk, where I exported by category and read ticket content directly where the tags were not specific enough. A dashboard or category export is sufficient; Claude can assist with classification, with human review.
+- Track volume and question type for support tickets tied to connector setup.
+- Depending on the tool that support uses, automate or manually export for target time window to analyze tickets. At Affirm, they used Zendesk so I exported tickets by category and reviewed ticket content manually as needed. Ideally, there’d be a dashboard to review or ability to export tickets by date and category/tag. Claude can assist with review/classification, with human review.
 
 ### Migration health
 
-- Page analytics on merged and moved pages, checking that traffic holds after redirects.
-- 404 rate, watched closely in the first 48 hours after any URL change. Whether Mintlify surfaces this directly is unconfirmed; Google Analytics or another integration covers it otherwise.
-- Alerting on sudden drops in views or spikes in 404s.
-
-**One caveat worth stating.** Docs metrics move for reasons unrelated to docs — a product launch, a pricing change, a popular external tutorial. A redirect that resolves to the top of a long page instead of the right section will not appear in any 404 count. Time on page and immediate bounce from redirect targets are the closest available signals.
+- Track page analytics on merged and moved pages, checking that traffic holds after redirects.
+- Watch 404 rate closely in the first 48 hours after any URL change. Unsure if this is tracked in Mintlify; Google Analytics or another integration can cover it if not.
+- Set up integration system or Claude to alert on sudden drops in views or spikes in 404s.
