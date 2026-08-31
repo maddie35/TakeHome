@@ -1,0 +1,741 @@
+[
+  {
+    "flagged": true,
+    "page_type": "task",
+    "violations": [
+      {
+        "rule": "Article titles must be 2-3 words, 5 words maximum",
+        "detail": "The title 'Manage your listing after publishing' is 5 words but borderline; more importantly section title issues below are the main concern. (Title itself is 5 words, at the max limit, acceptable)"
+      },
+      {
+        "rule": "Section titles should be consistent in form/tense across the page",
+        "detail": "Sections mix present-tense verb phrases ('Update your MCP server', 'Update your plugin', 'Update your listing', 'Delist your connector') with a non-parallel statement-style heading ('Slugs are permanent'), breaking consistency of section title style."
+      }
+    ],
+    "summary": "This is a task-style page with mostly compliant sentence-case headings, but the section 'Slugs are permanent' breaks the consistent present-tense verb-phrase pattern used by the other sections (e.g., 'Update your MCP server', 'Delist your connector').",
+    "page": "connectors/building/after-publishing"
+  },
+  {
+    "page_type": "context",
+    "flagged": true,
+    "violations": [
+      {
+        "rule": "Article titles must be 2-3 words, 5 words maximum",
+        "detail": "Title 'Authentication for connectors' is 3 words - actually within limit, but check nav match not verifiable; flagging heading structure issues instead"
+      },
+      {
+        "rule": "Context article template fixed section order (What is/are, Types, When to use it, How it works, Availability, Related articles)",
+        "detail": "Page uses an entirely different section structure ('Supported authentication types', 'Anthropic-held client credentials', 'DCR and CIMD details', 'Cross-host authorization servers', 'Callback URLs', 'Token refresh', 'Enterprise authentication', 'Custom connectors', 'Endpoint latency', 'Network reference') that does not follow the fixed template order and omits required sections like 'What is/are', 'When to use it', 'How it works', and 'Related articles'"
+      },
+      {
+        "rule": "No how-to or step instructions belong on a context article; link out to a task article instead",
+        "detail": "The 'Anthropic-held client credentials' section contains a numbered step-by-step flow (1. You create an OAuth client_id... 2. Anthropic stores... 3. When a user connects... 4. After consent...), which is how-to/step content embedded in a context page"
+      },
+      {
+        "rule": "Section titles should be present tense and descriptive but brief",
+        "detail": "Section titles like 'DCR and CIMD details', 'Network reference', 'Endpoint latency' are noun-phrase reference labels rather than present-tense descriptive section titles consistent with the template style"
+      }
+    ],
+    "summary": "This is a long reference-style context page that does not follow the fixed Context article template section order and embeds step-by-step instructions that should be split into a task article.",
+    "page": "connectors/building/authentication"
+  },
+  {
+    "page_type": "context",
+    "flagged": true,
+    "violations": [
+      {
+        "rule": "Article titles must be 2-3 words, 5 words maximum",
+        "detail": "Title 'Directory connectors vs custom connectors' is 5 words but borderline; more importantly it doesn't match a clean fixed template title pattern -- however word count is at the 5-word max so this is acceptable. (See other violations below for stronger issues.)"
+      },
+      {
+        "rule": "Context article template fixed section order (1. What is/are ___, 2. Types, 3. When to use it, 4. How it works, 5. Availability, 6. Related articles)",
+        "detail": "Page uses non-template section headings such as 'Share an install link', 'Suggested Connectors', 'Use both: directory plus elevated custom', 'Per-tenant URLs', and 'What the directory is not' instead of following the fixed order of What is/Types/When to use/How it works/Availability/Related articles."
+      },
+      {
+        "rule": "No how-to or step instructions belong on a context article; link out to a task article instead",
+        "detail": "The 'Share an install link' section and its 'Directory connectors' / 'Custom connectors' subsections give step-by-step instructions (URL formats, parameters, examples) for constructing install links, which is how-to content that should be in a task article."
+      },
+      {
+        "rule": "Section titles should be present tense and descriptive",
+        "detail": "Heading 'Suggested Connectors' uses title case rather than sentence case, violating the sentence-case title rule for headings."
+      }
+    ],
+    "summary": "This is a context/conceptual page but does not follow the fixed Context article template section order and includes how-to/step instructions (install link construction) that should be moved to a task article; one heading also breaks sentence case.",
+    "page": "connectors/building/directory-vs-custom"
+  },
+  {
+    "page_type": "task",
+    "flagged": true,
+    "violations": [
+      {
+        "rule": "Article titles must be 2-3 words, 5 words maximum",
+        "detail": "Title 'Enterprise Managed Auth for connectors' is 5 words but contains title-case capitalization issues (see below); also borderline on length"
+      },
+      {
+        "rule": "All titles must use sentence case only",
+        "detail": "Title 'Enterprise Managed Auth for connectors' capitalizes 'Managed Auth' as if a proper noun/title case rather than sentence case"
+      },
+      {
+        "rule": "Section titles should be present tense",
+        "detail": "Section heading 'Testing your implementation' uses gerund form instead of present tense (should be e.g. 'Test your implementation')"
+      },
+      {
+        "rule": "Section titles should be present tense and consistent",
+        "detail": "Section heading 'Provide setup documentation' is imperative while other headings like 'Testing your implementation' are gerund-based, creating inconsistency in tense across sections"
+      }
+    ],
+    "summary": "This task/how-to style page mostly follows heading structure correctly (starts at h2, no skipped levels) but the title is not in proper sentence case and several section headings mix gerund and imperative tenses inconsistently.",
+    "page": "connectors/building/enterprise-managed-auth"
+  },
+  {
+    "page_type": "other",
+    "flagged": true,
+    "violations": [
+      {
+        "rule": "Section titles should be present tense, not gerund form",
+        "detail": "\"Testing your server\" should be \"Test your server\""
+      },
+      {
+        "rule": "Card titles should use sentence case",
+        "detail": "\"MCP Overview\" and \"Submit to Directory\" use title case instead of sentence case"
+      }
+    ],
+    "summary": "This is an index/landing page mixing reference tables and links; it mostly follows heading rules (starts at h2, no skipped levels) but has a gerund section title and title-cased card titles that should be sentence case.",
+    "page": "connectors/building/index"
+  },
+  {
+    "page_type": "task",
+    "flagged": true,
+    "violations": [
+      {
+        "rule": "Article titles must be 2-3 words, 5 words maximum",
+        "detail": "Title 'Lazy authentication for MCP servers' is 5 words, at the max but borderline; more importantly it's descriptive/nominal rather than a task-verb title despite the page being step-by-step (task) content"
+      },
+      {
+        "rule": "Task articles must start with a present tense verb",
+        "detail": "Page title 'Lazy authentication for MCP servers' does not start with a present tense verb, even though the page contains step-by-step instructions (e.g. the 'Try it' section with numbered Steps for running the server, calling tools, adding a connector)"
+      },
+      {
+        "rule": "Section titles should be present tense",
+        "detail": "Section heading 'OAuth discovery caching' is a noun phrase rather than present tense phrasing like other sections (e.g. 'Return 401, not a tool error', 'Gate at the HTTP layer' which are imperative/present-tense style)"
+      }
+    ],
+    "summary": "This is a task-style page (contains a 'Try it' step-by-step walkthrough) but its title is a noun phrase rather than a present-tense verb start, and one section title ('OAuth discovery caching') breaks the present-tense consistency of the other section headings; heading hierarchy itself (h2 start, no skipped levels) is otherwise correct.",
+    "page": "connectors/building/lazy-authentication"
+  },
+  {
+    "page_type": "task",
+    "flagged": false,
+    "violations": [],
+    "summary": "Page follows sentence case title and proper h2-start heading structure without skipped levels; task-page conventions are met and template rules don't apply.",
+    "page": "connectors/building/managing-your-listing"
+  },
+  {
+    "flagged": true,
+    "page_type": "context",
+    "violations": [
+      {
+        "rule": "Article titles must be 2-3 words, 5 words maximum",
+        "detail": "\"Building cross-platform MCP Apps\" is 4 words but also violates sentence case (see next)"
+      },
+      {
+        "rule": "Titles must be sentence case only",
+        "detail": "\"Building cross-platform MCP Apps\" capitalizes \"Apps\" - should be \"Building cross-platform MCP apps\""
+      },
+      {
+        "rule": "Context article template fixed section order (What is/are ___, Types, When to use it, How it works, Availability, Related articles)",
+        "detail": "Page starts directly with \"How it works\" and \"Platform differences\", omitting the required \"What is/are ___\" and \"When to use it\" sections, and includes a non-template section \"Platform differences\" not in the fixed order"
+      },
+      {
+        "rule": "No how-to or step instructions belong on a context article; link out to a task/how-to article instead",
+        "detail": "The \"Domain handling\" subsection includes a step-by-step shell command instruction for computing the domain value, which is how-to content"
+      }
+    ],
+    "summary": "The page's title is not in sentence case and exceeds word-count guidance, and it fails to follow the fixed context-article template (missing intro/when-to-use sections, includes an extraneous \\\"Platform differences\\\" section, and embeds how-to instructions that should be linked out instead).\"",
+    "page": "connectors/building/mcp-apps/cross-compatibility"
+  },
+  {
+    "page_type": "context",
+    "flagged": true,
+    "violations": [
+      {
+        "rule": "Article titles must be 2-3 words, 5 words maximum, and match navigation name.",
+        "detail": "Title 'Design guidelines' is 2 words, which is fine; however the page does not follow the Context article template order (see below), which is the primary issue for this page type."
+      },
+      {
+        "rule": "Context article template: fixed section order (What is/are ___, Types, When to use it, How it works, Availability, Related articles) cannot be reordered, and other sections should not be inserted outside this structure.",
+        "detail": "The page uses a completely different section structure (Overview, What makes a good MCP App, Display modes, Mobile guidelines, Visual design, Interaction patterns, Accessibility, Style variables) that does not follow the required order of 'What is/are ___', 'Types', 'When to use it', 'How it works', 'Availability', 'Related articles'. There is no 'What is' opening section, no 'Related articles' closing section, and no 'Availability' section."
+      },
+      {
+        "rule": "Section titles should be present tense.",
+        "detail": "Section title 'What makes a good MCP App' is not clearly present-tense phrasing consistent with template wording like 'What is/are ___'."
+      },
+      {
+        "rule": "Heading levels: always begin with h2, don't skip levels.",
+        "detail": "Under 'Mobile guidelines' (h2), subsections like 'Host context for layout' (h3) contain h3-level items 'Safe areas' bolded inline rather than as headings, but structurally headings go h2 > h3 consistently (Display modes h2 > Inline card h3, etc.) -- no skips detected, so this is compliant; flagged only for template/order issues above."
+      }
+    ],
+    "summary": "This is a context/conceptual page about MCP App design guidelines, but it does not follow the fixed Context article template section order (missing 'What is/are', 'Availability', and 'Related articles' sections, and using non-standard section names like 'Overview' and 'Visual design' instead).\"",
+    "page": "connectors/building/mcp-apps/design-guidelines"
+  },
+  {
+    "page_type": "context",
+    "flagged": true,
+    "violations": [
+      {
+        "rule": "Article titles must be 2-3 words, 5 words maximum",
+        "detail": "Title 'Opening external links from MCP Apps' is 6 words, exceeding the maximum"
+      },
+      {
+        "rule": "Titles must be in sentence case",
+        "detail": "Title 'Opening external links from MCP Apps' capitalizes 'Apps' unnecessarily (should be 'MCP apps' if referring generically, but 'MCP' is an acronym so that's fine; however the overall phrase structure combined with word count is an issue)"
+      },
+      {
+        "rule": "Context article template fixed section order (What is/are, Types, When to use it, How it works, Availability, Related articles)",
+        "detail": "Page uses sections 'Default behavior', 'Allowlisting link destinations', 'User-activation requirement', 'Design for the modal' instead of following the fixed template order starting with a 'What is/are' section and ending with 'Related articles'"
+      },
+      {
+        "rule": "No how-to or step instructions belong on a context article; link out to a task article instead",
+        "detail": "Sections like 'Allowlisting link destinations' with instructions to 'Provide them in the Allowed link URIs field when you submit or update your directory listing' and 'Design for the modal' give direct how-to guidance rather than linking to a separate task article"
+      }
+    ],
+    "summary": "This context-style page on external link handling has a 6-word title (exceeding the 5-word max) and does not follow the fixed Context article template section order, instead mixing conceptual explanation with how-to/allowlisting instructions.",
+    "page": "connectors/building/mcp-apps/external-links"
+  },
+  {
+    "page_type": "task",
+    "flagged": true,
+    "violations": [
+      {
+        "rule": "Task articles must start with a present tense verb; title must be 2-3 words, 5 max",
+        "detail": "Title 'Get started with MCP Apps' is 5 words but arguably fine on length, however it does not clearly follow a strict present-tense verb command pattern like 'Test your connector' - 'Get started' is acceptable as present tense but borderline; flagged for review of section title tense consistency below."
+      },
+      {
+        "rule": "Section titles should use present tense, singular, consistent verb forms",
+        "detail": "Section headings 'Try an example MCP App' and 'Build your own MCP App' and 'Migrate from OpenAI Apps SDK' are present tense commands, but sub-sections 'Connect an example server' and 'See it in action' mix imperative and descriptive phrasing inconsistently, e.g. 'See it in action' does not follow the same pattern as 'Connect an example server'."
+      }
+    ],
+    "summary": "This is a task/how-to page with mostly correct heading structure (h2 then h3), but section title phrasing is inconsistent in tense/style across headings.",
+    "page": "connectors/building/mcp-apps/getting-started"
+  },
+  {
+    "page_type": "task",
+    "flagged": true,
+    "violations": [
+      {
+        "rule": "Article titles must be 2-3 words, 5 words maximum",
+        "detail": "Title \"Supersede older widget instances\" is 4 words, within the limit, but exceeds preferred 2-3 word range (borderline, noting for completeness)"
+      },
+      {
+        "rule": "Don't skip heading levels (h2 > h3 > h2 > h3 > h4, no skipping)",
+        "detail": "Section 'Run the election in the widget' (h2) is followed directly by h3 subsections ('Read the key from the toolresult event', etc.), which is fine, but 'Special considerations' (h2) is followed by h3 subsections while earlier top-level sections like 'How it works' and 'Mint the election key on the server' have no h3 children -- structurally consistent, however 'Why not use client-side Date.now()?' appears as h3 nested directly under 'Mint the election key on the server' (h2) which is consistent; no actual skip found upon review"
+      }
+    ],
+    "summary": "The page is a task/how-to article with correct h2-start heading structure and no skipped levels; only a minor note on title length (4 words, near the upper preferred bound) but no clear violations of the universal rules.",
+    "page": "connectors/building/mcp-apps/instance-supersession"
+  },
+  {
+    "page_type": "task",
+    "flagged": true,
+    "violations": [
+      {
+        "rule": "Article titles must be 2-3 words, 5 words maximum",
+        "detail": "Title 'Blend your MCP App with Claude's theme' is 7 words"
+      },
+      {
+        "rule": "Task articles must start with a present tense verb",
+        "detail": "Title 'Blend your MCP App with Claude's theme' starts with 'Blend' (which is present tense, but the phrasing exceeds word count and doesn't clearly follow the imperative task-article pattern like the standard's example)"
+      },
+      {
+        "rule": "All titles must be sentence case",
+        "detail": "Title 'Blend your MCP App with Claude's theme' capitalizes 'App' mid-title, which is not sentence case"
+      }
+    ],
+    "summary": "This is a task article with a title that violates the word-count and sentence-case rules, though heading structure (h2 start, no skipped levels) is otherwise followed correctly.",
+    "page": "connectors/building/mcp-apps/transparent-theming"
+  },
+  {
+    "page_type": "task",
+    "flagged": true,
+    "violations": [
+      {
+        "rule": "Article titles must be 2-3 words, 5 words maximum",
+        "detail": "Title \"Troubleshooting MCP Apps\" is acceptable length (3 words), but headings like \"Problem: App doesn't render when tool results are large\" exceed 5 words for section titles (also see section title rules below)"
+      },
+      {
+        "rule": "Section titles should be present tense and descriptive but brief",
+        "detail": "Section titles such as \"Problem: Tool call appears but the app is invisible\", \"Problem: App doesn't render when tool results are large\", \"Problem: Assets or API requests fail only on iOS\", and \"Problem: ui.domain validation fails\" are long, sentence-like headings rather than brief present-tense descriptive titles"
+      }
+    ],
+    "summary": "This is a task/troubleshooting page with correctly structured h2-first headings and no skipped levels, but several section titles violate the brevity/conciseness guidance for section titles.",
+    "page": "connectors/building/mcp-apps/troubleshooting"
+  },
+  {
+    "flagged": true,
+    "page_type": "context",
+    "violations": [
+      {
+        "rule": "Article titles must be 2-3 words, 5 words maximum, and must match navigation name",
+        "detail": "Title 'Model Context Protocol (MCP)' is 4 words (with parenthetical), and likely exceeds intended brevity; should be checked against nav name."
+      },
+      {
+        "rule": "Context article template fixed section order (What is/are ___ > Types > When to use it > How it works > Availability > Related articles)",
+        "detail": "Page order is 'What is MCP?' > 'How MCP works' > 'Security model' > 'Building with MCP' > 'Related topics' -- missing required 'When to use it' section, and includes extra non-template sections ('Security model', 'Building with MCP') that reorder/replace the fixed structure."
+      },
+      {
+        "rule": "Section titles should use fixed wording 'Related articles' for the last section",
+        "detail": "Section titled 'Related topics' instead of 'Related articles'."
+      },
+      {
+        "rule": "No how-to or step instructions belong on a context article; link out to a task article instead",
+        "detail": "The 'For developers' subsection under 'Building with MCP' includes instructional content (SDK links, hosting support) that reads like build/how-to guidance rather than conceptual content."
+      }
+    ],
+    "summary": "This context article on MCP has reasonable headings but deviates from the fixed context template order, omits the required 'When to use it' section, adds non-standard sections like 'Security model' and 'Building with MCP', and uses 'Related topics' instead of the fixed 'Related articles' title.",
+    "page": "connectors/building/mcp"
+  },
+  {
+    "page_type": "task",
+    "flagged": true,
+    "violations": [
+      {
+        "rule": "Article titles: 2-3 words; 5 words maximum.",
+        "detail": "Title 'Build a desktop extension with MCPB' is 6 words, exceeding the 5-word maximum."
+      },
+      {
+        "rule": "Section titles should be present tense and consistent.",
+        "detail": "Section title 'Ready for distribution' is not phrased as a present-tense action/section title consistent with others like 'Choose a language' or 'Add an icon.'"
+      },
+      {
+        "rule": "Section titles should be descriptive but brief / present tense phrasing.",
+        "detail": "Section heading 'Local (MCPB) vs remote: which to build' is a longer, question-like phrasing inconsistent with the brief, present-tense style used elsewhere (e.g., 'Choose a language')."
+      }
+    ],
+    "summary": "This is a task page with mostly compliant h2-level headings, but the page title exceeds the 5-word maximum and a couple of section titles deviate from the concise, present-tense, consistent style required.",
+    "page": "connectors/building/mcpb"
+  },
+  {
+    "flagged": true,
+    "page_type": "other",
+    "violations": [
+      {
+        "rule": "Section titles should be present tense",
+        "detail": "Section title 'Before you submit' uses present tense but the checklist item structure elsewhere ('Reference API docs in custom query tools', 'Keep tool names short') is fine; however 'Avoid prompt-injection patterns' and other headings are imperative/present tense and consistent, so no clear violation found here beyond title mismatch below."
+      },
+      {
+        "rule": "Article titles must match the navigation name / be 2-3 words, 5 max",
+        "detail": "Page title 'Pre-submission checklist' (H1) does not match the page slug 'review-criteria', suggesting a mismatch with the navigation name."
+      }
+    ],
+    "summary": "The page is a reference/checklist ('other' type) that mostly follows heading and casing rules, but its H1 title 'Pre-submission checklist' appears inconsistent with its slug/nav name 'review-criteria', raising a title-navigation mismatch concern.",
+    "page": "connectors/building/review-criteria"
+  },
+  {
+    "page_type": "task",
+    "flagged": true,
+    "violations": [
+      {
+        "rule": "Article titles must be sentence case",
+        "detail": "Title 'Submitting to the Connectors Directory' uses title case (\"Connectors Directory\" capitalized) instead of sentence case, e.g. should be 'Submitting to the connectors directory'."
+      },
+      {
+        "rule": "Article titles must be 2-3 words, 5 words maximum",
+        "detail": "Title 'Submitting to the Connectors Directory' is 5 words but combined with title-case violation; also task titles must start with a present tense verb (e.g. 'Submit'), not the gerund 'Submitting'."
+      },
+      {
+        "rule": "Task articles must start with a present tense verb",
+        "detail": "Title 'Submitting to the Connectors Directory' begins with the gerund 'Submitting' rather than a present tense verb like 'Submit'."
+      }
+    ],
+    "summary": "This task article's title violates sentence case and present-tense-verb rules ('Submitting to the Connectors Directory'), though heading levels (h2 start, no skipped levels) are otherwise correctly structured.",
+    "page": "connectors/building/submission"
+  },
+  {
+    "page_type": "task",
+    "flagged": true,
+    "violations": [
+      {
+        "rule": "Task articles must start with a present tense verb (e.g. 'Test your connector', not 'Testing your connector')",
+        "detail": "Title 'Testing your connector' uses gerund form instead of present tense verb"
+      },
+      {
+        "rule": "Section titles should be consistent in tense/form across sections",
+        "detail": "Sections mix imperative present-tense verbs ('Test as a custom connector', 'Test a local server', 'Validate with MCP Inspector', 'Detect Claude as the client', 'Prepare test credentials for review') with a gerund/noun-form heading 'Debugging', which is inconsistent"
+      }
+    ],
+    "summary": "This is a task page walking through testing steps; the title uses gerund form ('Testing your connector') instead of a present tense verb, and the 'Debugging' section heading breaks the present-tense verb pattern used by sibling sections.",
+    "page": "connectors/building/testing"
+  },
+  {
+    "page_type": "task",
+    "flagged": true,
+    "violations": [
+      {
+        "rule": "Article titles: 2-3 words; 5 words maximum.",
+        "detail": "Title 'Troubleshooting connectors' is fine at 2 words, but note this is a task-like page; however the section title 'Diagnostic checklist' and quoted error headings like '\"Couldn't reach the MCP server\"' and '\"Authorization with the MCP server failed\"' exceed the brevity guidance for section titles (5+ words), violating 'Be descriptive but brief.'"
+      },
+      {
+        "rule": "Section titles should be present tense, not quoted error strings mixed with normal titles.",
+        "detail": "Headings '\"Couldn't reach the MCP server\"' and '\"Authorization with the MCP server failed\"' are raw error message quotes rather than concise present-tense section titles, inconsistent with sibling section 'Find your reference ID' and 'Diagnostic checklist'."
+      },
+      {
+        "rule": "Heading hierarchy: don't skip heading levels.",
+        "detail": "Under '\"Couldn't reach the MCP server\"' (h2), subsections use h3 (### 1. Hostname resolves..., ### 2. Firewall..., etc.), then under those an h3 'Microsoft Entra ID rejects the resource value' appears directly under the h2 '\"Authorization with the MCP server failed\"' without an intervening structural issue -- this is consistent, so no actual skip; retracting this violation is not needed but kept for note. (No skip detected, structure is h2>h3 throughout.)"
+      }
+    ],
+    "summary": "The page is a task/troubleshooting guide with correct heading hierarchy (h2 then h3, no skips) but uses long, non-parallel section titles quoting raw UI error strings instead of concise present-tense section titles as required by the style guide.",
+    "page": "connectors/building/troubleshooting"
+  },
+  {
+    "page_type": "context",
+    "flagged": true,
+    "violations": [
+      {
+        "rule": "Article titles must be 2-3 words, 5 words maximum",
+        "detail": "\"What should I build: MCP, plugin, or both?\" is 8 words, exceeding the 5-word maximum"
+      },
+      {
+        "rule": "Context article template fixed section order (What is/are ___, Types, When to use it, How it works, Availability, Related articles)",
+        "detail": "Page uses non-template sections like \"The recommendation,\" \"When to build only one,\" \"What a plugin can bundle,\" \"How they coexist,\" \"Skills are not a standalone directory type,\" and \"Build it with Claude\" instead of following the fixed order/wording"
+      },
+      {
+        "rule": "Section titles should be present tense and consistent",
+        "detail": "\"Skills are not a standalone directory type\" and \"How they coexist\" are declarative statements rather than present-tense, descriptive-but-brief section titles like the template expects"
+      },
+      {
+        "rule": "No how-to or step instructions belong on a context article; link out instead",
+        "detail": "\"Build it with Claude\" section gives step-by-step instructions (install the plugin, run the command) rather than linking out to a task article"
+      },
+      {
+        "rule": "Final section should be 'Related articles' per template",
+        "detail": "Page ends with \"Next steps\" instead of the fixed template section \"Related articles\""
+      }
+    ],
+    "summary": "This context article violates the title length rule and does not follow the fixed Context article template section order/wording, and includes how-to instructions that should be linked out instead.",
+    "page": "connectors/building/what-to-build"
+  },
+  {
+    "flagged": true,
+    "page_type": "context",
+    "violations": [
+      {
+        "rule": "Context article template fixed section order (What is/are -> Types -> When to use it -> How it works -> Availability -> Related articles)",
+        "detail": "Page includes extra sections not in the template ('MCPB (MCP Bundles)', 'Key features', 'Enterprise deployment', 'Security considerations', 'Getting started') interleaved out of order, and omits/renames 'How it works' entirely; the sequence does not follow the fixed template order."
+      },
+      {
+        "rule": "Section titles should be present tense and consistent in phrasing",
+        "detail": "Section 'When to use desktop vs remote' deviates from the fixed template wording 'When to use it' without being a minor edit that preserves the fixed phrase intent."
+      },
+      {
+        "rule": "No how-to or step instructions belong on a context article; link out instead",
+        "detail": "The 'Getting started' section contains a numbered step-by-step list (1. Review the MCPB documentation... 5. Deploy to your organization), which is how-to content that should be a separate task article."
+      },
+      {
+        "rule": "No how-to or step instructions belong on a context article",
+        "detail": "The 'Enterprise deployment' section also contains a numbered step list (1. Build custom desktop extensions... 4. Control which extensions...), which is procedural/how-to content."
+      },
+      {
+        "rule": "Section titles: use fixed wording for 'Related articles'",
+        "detail": "Final section is titled 'Related topics' instead of the fixed template wording 'Related articles'."
+      }
+    ],
+    "summary": "The page is a context article that includes several extra procedural/how-to sections (Enterprise deployment, Getting started) and deviates from the fixed template's section order and naming (e.g., 'Related topics' instead of 'Related articles', missing/renamed 'How it works').",
+    "page": "connectors/custom/desktop-extensions"
+  },
+  {
+    "page_type": "task",
+    "flagged": true,
+    "violations": [
+      {
+        "rule": "Article titles must be 2-3 words, 5 words maximum",
+        "detail": "Page title \"Third party connectors with remote MCP\" is 6 words, exceeding the 5-word maximum."
+      },
+      {
+        "rule": "Section titles should be present tense and consistent",
+        "detail": "Section title \"Managing connectors\" uses gerund form instead of present tense (e.g. \"Manage connectors\"), inconsistent with other action-style headings like \"Adding custom connectors\" and \"Reporting issues\" which also use gerund forms rather than present tense verbs."
+      },
+      {
+        "rule": "Section titles should be present tense",
+        "detail": "Headings \"Adding custom connectors\", \"Finding connectors\", \"Adding a request header\", \"Enter the full header value\" (inconsistent tense mixing), and \"Reporting issues\" use gerund/mixed forms rather than consistent present tense."
+      }
+    ],
+    "summary": "This task-oriented page mostly follows heading structure correctly (h2 start, no skipped levels) but violates the title length rule and has inconsistent gerund-form section titles instead of present tense.",
+    "page": "connectors/custom/remote-mcp"
+  },
+  {
+    "page_type": "other",
+    "flagged": true,
+    "violations": [
+      {
+        "rule": "Section titles should be present tense, not gerund form",
+        "detail": "Heading 'Browsing the directory' uses gerund form instead of present tense (e.g. 'Browse the directory')"
+      },
+      {
+        "rule": "Section titles should be present tense, not gerund form",
+        "detail": "Heading 'Submitting to the directory' uses gerund form instead of present tense (e.g. 'Submit to the directory')"
+      },
+      {
+        "rule": "Section title should be descriptive but brief",
+        "detail": "Heading 'Requesting a connector on a Team plan' uses gerund form instead of present tense (e.g. 'Request a connector on a Team plan')"
+      },
+      {
+        "rule": "Related articles section naming (context template) / consistency",
+        "detail": "Final section is titled 'Related topics' rather than 'Related articles'"
+      }
+    ],
+    "summary": "This is a mixed reference/task 'other' page with correct h2-start heading structure and no skipped levels, but several section headings use gerund (-ing) form instead of present tense as required by the style guide.",
+    "page": "connectors/directory"
+  },
+  {
+    "flagged": true,
+    "page_type": "task",
+    "violations": [
+      {
+        "rule": "Article titles must be 2-3 words, 5 words maximum",
+        "detail": "Title 'Get started with connectors' is 4 words but combined with section headings suggests review; more critically several section titles exceed brevity/word count guidance is not a title issue here - main title is within limit but verify: 'Get started with connectors' is 4 words, within max 5, acceptable"
+      },
+      {
+        "rule": "Section titles should be present tense, singular, and consistent",
+        "detail": "'Setting up your first connector' and 'Using connectors in conversations' use gerund/-ing form instead of present tense verb form (e.g., 'Set up your first connector', 'Use connectors in conversations')"
+      },
+      {
+        "rule": "Section titles should be present tense, singular, and consistent",
+        "detail": "Subsection 'Step 1: Access connector settings' etc. are fine, but top-level 'Connector-specific tips' and 'Best practices' and 'Troubleshooting' are not verb-based inconsistency with other sections like 'Setting up...' and 'Using...' which are gerunds while others are noun phrases, violating consistency rule"
+      },
+      {
+        "rule": "Section titles should be descriptive but brief, avoiding vague titles",
+        "detail": "'Related topics' should likely be 'Related articles' per fixed template naming, though this is a task page so template doesn't strictly apply, but heading naming consistency across docs is implied"
+      }
+    ],
+    "summary": "This is a task/tutorial page with mostly compliant heading structure (starts at h2, no skipped levels), but several section titles use inconsistent tense (gerunds like 'Setting up' and 'Using' instead of present-tense imperative verbs) violating the section title tense/consistency rule.",
+    "page": "connectors/getting-started"
+  },
+  {
+    "page_type": "task",
+    "flagged": true,
+    "violations": [
+      {
+        "rule": "Section titles should be present tense and descriptive but brief",
+        "detail": "Section heading 'What information is retrieved' is phrased as a passive question rather than a concise present-tense descriptive title (e.g., 'Information retrieved')."
+      },
+      {
+        "rule": "Section titles should be consistent in verb form (gerund vs imperative)",
+        "detail": "Headings mix step-based task sections ('Adding GitHub repositories', 'Connecting to private repositories') using gerund form ('-ing') instead of present tense/imperative, e.g. should be 'Add GitHub repositories', 'Connect to private repositories' to align with present-tense rule."
+      }
+    ],
+    "summary": "Page is a task-style how-to for connecting GitHub repos, but several section titles use gerund ('-ing') forms instead of the required present tense, and one heading is a passive question rather than a brief descriptive title.",
+    "page": "connectors/github/index"
+  },
+  {
+    "page_type": "task",
+    "flagged": true,
+    "violations": [
+      {
+        "rule": "Article titles must be 2-3 words, 5 words maximum",
+        "detail": "\"Google Calendar integration\" is acceptable length, but check nav match; title is fine at 3 words - not a violation actually"
+      },
+      {
+        "rule": "Don't skip heading levels (h2 > h3 > h2...)",
+        "detail": "Under 'How to use Calendar integration' (h2), the subsections '1. Ask about your schedule', '2. Review Claude's response', '3. Follow up' are h3, which is fine, but 'Privacy and data handling' (h2) has 'Authentication' and 'Data access' as h3 - structure is consistent; no skip found overall"
+      },
+      {
+        "rule": "Section titles should be present tense and singular",
+        "detail": "Section title 'How to use Calendar integration' is a how-to style heading rather than a concise present-tense descriptive title"
+      }
+    ],
+    "summary": "The page is a task-style connector guide with mostly correct heading structure, but includes an awkwardly phrased section title ('How to use Calendar integration') that doesn't follow the concise, present-tense section title convention.",
+    "page": "connectors/google/calendar"
+  },
+  {
+    "flagged": true,
+    "page_type": "task",
+    "violations": [
+      {
+        "rule": "Article titles must be 2-3 words, 5 words maximum, and task articles must start with a present tense verb",
+        "detail": "Title 'Google Drive integration' is a noun phrase, not a present tense verb-led title as required for task pages (which this page effectively is, given step-by-step 'How to add Google Docs' instructions)"
+      },
+      {
+        "rule": "Section titles should be present tense and descriptive but brief",
+        "detail": "Section heading 'How to add Google Docs' mixes instructional phrasing rather than a concise present-tense action title like 'Add Google Docs'"
+      }
+    ],
+    "summary": "This is a task-style page (step-by-step instructions) but its title and some headings don't follow the present-tense/verb-led conventions expected, and heading structure itself is otherwise fine (h2 start, no skipped levels).",
+    "page": "connectors/google/drive"
+  },
+  {
+    "flagged": true,
+    "page_type": "task",
+    "summary": "This is largely a task/how-to page with proper h2 start and no skipped levels, but it mixes in context-like sections and has a section title violating present-tense/heading conventions.",
+    "violations": [
+      {
+        "rule": "Section titles: present tense",
+        "detail": "Section heading 'Understanding citations' uses gerund form instead of present tense (e.g., should be 'Understand citations')."
+      },
+      {
+        "rule": "Section titles: present tense",
+        "detail": "Section heading 'How to use Gmail integration' is phrased as a title rather than a present-tense action-oriented heading consistent with other sections like 'Connect Gmail'."
+      }
+    ],
+    "page": "connectors/google/gmail"
+  },
+  {
+    "page_type": "task",
+    "flagged": false,
+    "violations": [],
+    "summary": "This is a mixed setup/reference page (task-like) titled in sentence case with proper h2-start heading structure and no skipped levels; no violations found.",
+    "page": "connectors/microsoft/365"
+  },
+  {
+    "page_type": "context",
+    "flagged": true,
+    "violations": [
+      {
+        "rule": "Context article template fixed section order (1. What is/are ___, 2. Types, 3. When to use it, 4. How it works, 5. Availability, 6. Related articles)",
+        "detail": "Page uses sections in order 'How connectors work', 'Types of connectors', 'Ways to connect', 'Related concepts', 'Platform availability', 'Next steps' -- this omits/reorders required sections (no 'What is/are' section, 'How it works' appears before 'Types', and 'Availability' appears after 'Related concepts' instead of before it)."
+      },
+      {
+        "rule": "Section titles should be descriptive but brief / present tense, not extraneous sections outside template",
+        "detail": "Sections 'Ways to connect' and 'Related concepts' are not part of the fixed template section list (What is/are, Types, When to use it, How it works, Availability, Related articles)."
+      },
+      {
+        "rule": "Fixed section wording 'Related articles' should be used for the related-content section",
+        "detail": "Page uses 'Related concepts' and 'Next steps' instead of the fixed 'Related articles' section title."
+      }
+    ],
+    "summary": "This is a context/overview article that skips the required 'What is/are ___' and 'When to use it' sections, reorders 'How it works' before 'Types', and adds non-template sections ('Ways to connect', 'Related concepts', 'Next steps') instead of following the fixed template order ending in 'Related articles'.",
+    "page": "connectors/overview"
+  },
+  {
+    "page_type": "task",
+    "flagged": true,
+    "violations": [
+      {
+        "rule": "Heading structure must always begin with h2 (page title is h1); no skipped levels",
+        "detail": "Page starts with H1 'Slack integration' then jumps into H2 'Claude in Slack (earlier app)' followed by H3 'Ways to interact with Claude' -- this part is fine, but under 'Installation' (H2) there are H3s 'For Slack admins' and 'For individual users', which is consistent; however the overall page mixes task-style step-by-step instructions with reference/settings content without a clear single page type, and heading levels are consistent (h2>h3) throughout so no skip violation, but flagging title/heading issues below."
+      },
+      {
+        "rule": "Article titles must be 2-3 words, 5 words max, and match navigation name",
+        "detail": "Title 'Slack integration' is acceptable in length, but this is a task-heavy page mixing installation steps and reference info; no clear task verb title despite containing numbered step instructions (e.g., 'Navigate to the Claude app...', 'Click Add to Slack')."
+      },
+      {
+        "rule": "Section titles should be present tense and singular, descriptive but brief",
+        "detail": "Section 'Managing connections' and subsection 'Viewing connection status' use gerund/-ing form instead of present tense (e.g., should be 'Manage connections', 'View connection status')."
+      }
+    ],
+    "summary": "Page mixes conceptual and step-by-step instructional content under an ambiguous 'integration' title, with several section headings using -ing forms instead of the required present-tense phrasing.",
+    "page": "connectors/slack/index"
+  },
+  {
+    "page_type": "context",
+    "flagged": true,
+    "violations": [
+      {
+        "rule": "Context article fixed section order (1. What is/are ___, 2. Types, 3. When to use it, 4. How it works, 5. Availability, 6. Related articles)",
+        "detail": "The page uses sections 'Verified', 'Community', 'Custom', 'The directory is optional', 'Advice for all third-party connectors', 'List your own connector' instead of the fixed template order; there is no 'What is/are', 'When to use it', 'How it works', or 'Related articles' section, and no opening definitional section."
+      },
+      {
+        "rule": "No how-to or step instructions belong on a context article; link out to a task article instead",
+        "detail": "The 'List your own connector' section directs users to 'start with the review criteria and the submission guidelines' as an action-oriented instruction rather than purely conceptual content, blurring into task-like guidance."
+      },
+      {
+        "rule": "Section titles should be descriptive but brief and consistent; avoid vague/non-descriptive titles",
+        "detail": "Section titles 'Verified', 'Community', 'Custom' are single-word labels that, while short, are arguably acceptable, but 'The directory is optional' is phrased as a full sentence/claim rather than a concise descriptive noun-phrase heading, inconsistent with the style of other headings."
+      }
+    ],
+    "summary": "This is a context/conceptual page about connector verification levels, but it does not follow the fixed Context article template section order (missing 'What is/are', 'When to use it', 'How it works', 'Related articles') and instead uses ad hoc headings like 'Verified', 'Community', 'Custom', and 'The directory is optional'.",
+    "page": "connectors/verification"
+  },
+  {
+    "flagged": true,
+    "page_type": "context",
+    "violations": [
+      {
+        "rule": "Context article template fixed section order (1. What is/are ___, 2. Types, 3. When to use it, 4. How it works, 5. Availability, 6. Related articles)",
+        "detail": "Page uses sections 'What plugins do', 'Plugin directory', 'Origins in Claude Code', 'Plugins in Cowork', 'How plugins compose capabilities', 'Availability', 'Next steps' -- these don't follow the fixed order/naming; there's no clear 'What is/are ___' opening section, no 'When to use it' section, and extra sections ('Plugin directory', 'Origins in Claude Code', 'Plugins in Cowork') are inserted out of order before 'How it works' and 'Availability'.",
+        "rule_2": ""
+      },
+      {
+        "rule": "Section titles must be present tense",
+        "detail": "'How plugins compose capabilities' is descriptive but arguably fine; however 'What plugins do' as the opening section should map to 'What is/are ___' fixed wording template but is phrased differently."
+      },
+      {
+        "rule": "Section title should be descriptive but brief / consistent naming, not fixed wording used for template sections",
+        "detail": "'Availability' and 'Next steps' sections don't align with the fixed template's 'Related articles' naming (page uses 'Next steps' instead of 'Related articles')."
+      }
+    ],
+    "summary": "This is a context/overview article that mostly starts at h2 with no skipped levels, but it does not follow the fixed Context template section order/naming -- it lacks a 'What is/are ___' opening section and 'When to use it' section, inserts extra sections out of sequence, and uses 'Next steps' instead of the fixed 'Related articles' title.",
+    "page": "plugins/overview"
+  },
+  {
+    "page_type": "task",
+    "flagged": true,
+    "violations": [
+      {
+        "rule": "Section titles must be sentence case",
+        "detail": "Heading 'Plugin Directory: Community vs. Anthropic Verified' uses title case instead of sentence case"
+      },
+      {
+        "rule": "Section titles must be sentence case",
+        "detail": "Heading 'Guiding Claude through MCP setup' - 'Guiding' is a gerund, and while mostly fine casing-wise, other headings like 'Using safe MCP connectors in plugins' also use gerund form rather than present tense verb form as required by section title rules"
+      },
+      {
+        "rule": "Section titles should be present tense, not gerund phrasing",
+        "detail": "Headings 'Guiding Claude through MCP setup' and 'Using safe MCP connectors in plugins' use gerund (-ing) forms rather than present tense verb phrasing"
+      },
+      {
+        "rule": "Heading levels must not skip levels (h2 before h3, etc.) and must start with h2",
+        "detail": "The page begins with an h1 title 'Submitting your plugin' followed correctly by h2 sections, but subsections '### Guiding Claude through MCP setup' and '### Using safe MCP connectors in plugins' appear under the h2 'What makes a good plugin', and '### Before you start' appears under h2 'Submitting your plugin' -- these are fine structurally, but the duplicate top-level title 'Submitting your plugin' is reused as both the page h1 title and later an h2 section heading, which is confusing structurally"
+      },
+      {
+        "rule": "Article titles must be 2-3 words, 5 words maximum, and task articles must start with a present tense verb",
+        "detail": "Page title 'Submitting your plugin' uses gerund 'Submitting' instead of present tense verb form (should be e.g. 'Submit your plugin')"
+      }
+    ],
+    "summary": "The task page's title and several section headings use gerund (-ing) forms instead of the required present-tense verb phrasing, and one heading uses title case instead of sentence case.",
+    "page": "plugins/submit"
+  },
+  {
+    "flagged": true,
+    "page_type": "task",
+    "violations": [
+      {
+        "rule": "Task articles must start with a present tense verb (title should not be gerund)",
+        "detail": "Title \"Creating custom skills\" uses gerund form instead of present tense verb (should be e.g. \"Create custom skills\")"
+      },
+      {
+        "rule": "Article titles: 2-3 words; 5 words maximum",
+        "detail": "Title \"Creating custom skills\" is 3 words, within limit, but tense violates verb rule above"
+      },
+      {
+        "rule": "Section titles should be present tense, not gerund",
+        "detail": "Section heading \"Creating a `SKILL.md` file\" and \"Adding resources\", \"Adding scripts\", \"Packaging your skill\", \"Testing your skill\" all use gerund (-ing) form instead of present tense, e.g. should be \"Create a SKILL.md file\", \"Add resources\", \"Add scripts\", \"Package your skill\", \"Test your skill\""
+      },
+      {
+        "rule": "Don't skip heading levels",
+        "detail": "Under 'Testing your skill' (h2), subsections 'Before uploading' and 'After uploading' are h3, which is fine, but within 'Creating a SKILL.md file' (h2) there are h3 sections 'Required fields', 'Markdown body', 'Complete example' - these are consistent; however overall heading structure otherwise follows h2>h3 pattern correctly, no explicit skip found aside from title casing/tense issues."
+      }
+    ],
+    "summary": "The page is a task article but its title and several section headings use gerund (-ing) forms instead of the required present-tense verb form, violating the task article title rule and section title tense consistency.\"",
+    "page": "skills/how-to"
+  },
+  {
+    "flagged": true,
+    "page_type": "context",
+    "violations": [
+      {
+        "rule": "Context article template fixed section order (What is/are ___ > Types > When to use it > How it works > Availability > Related articles)",
+        "detail": "Page order is: Availability, How skills work, Types of skills, Skills vs. other features, Open standard, Related topics -- missing a 'What are skills?' opening section, 'Availability' appears first instead of after 'How it works', 'Types' appears after 'How it works' instead of before 'When to use it', and there is no 'When to use it' section at all."
+      },
+      {
+        "rule": "Section titles should be present tense and consistent/descriptive",
+        "detail": "'Types of skills' and 'Skills vs. other features' and 'Open standard' are extra/non-template sections not in the fixed list, and 'How skills work' should be 'How it works' per fixed wording."
+      },
+      {
+        "rule": "Related articles section naming",
+        "detail": "Section titled 'Related topics' instead of the fixed wording 'Related articles'."
+      }
+    ],
+    "summary": "This is a context article that omits the required 'What is/are ___' opening section and 'When to use it' section, reorders Availability/Types/How it works out of the fixed template sequence, and renames 'Related articles' to 'Related topics'.",
+    "page": "skills/overview"
+  }
+]
