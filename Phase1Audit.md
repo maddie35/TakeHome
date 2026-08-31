@@ -2,23 +2,21 @@
 
 ## Summary
 
-The three primitives are documented as features of the products that use them rather than as a layer readers navigate on their own terms. Inside Connectors, the top-level split is by artifact type instead of by what the reader is trying to do, and the same page appears under two different categories. Below that, article structure varies page to page: prerequisites appear in three formats, titles mix verb tenses, and reference material sits inside conceptual pages.
-
-The highest-value change is restructuring navigation around reader intent, with a fixed template per article type underneath it. The template work matters as much as the navigation. Consistent structure is what lets a retrieval system return the right section instead of a whole page, and it is the only part of this that a checker can enforce.
+Skills, Plugins, and Connectors are documented as features of the products that use them rather than as a layer users navigate to in their workflow. Connectors is split, at the top-level, by artifact type instead of by what the user's trying to do. Article structure varies from page to page: prerequisites appear in three formats, titles mix verb tenses, and reference and how-to material sits inside conceptual pages. The top-priority change is restructuring the information architecture based on the users' perspective/intent, and then establishing a fixed template for each article type. 
 
 ## Scope and method
 
-This audit covers the Connectors, Skills, and Plugins sections of `claude.com/docs`, read directly against the published pages. Findings cite specific pages so each one can be verified.
+This audit covers the Connectors, Skills, and Plugins sections of claude.com/docs, read directly against the published pages. 
 
 ---
 
-## P0 — Costs readers time
+## P0 — Costs user time
 
-### Navigation is organized by product offering, not reader intent
+### Navigation is organized by product offering, not user intent
 
-The Connectors section splits into artifact categories rather than tasks. A reader who wants to connect Gmail and a reader who wants to ship an MCP server need almost nothing in common, but both land in the same undifferentiated tree.
+The Connectors section splits into artifact categories rather than tasks. A user who wants to connect Gmail and a user who wants to ship an MCP server need almost nothing in common, but both land in the same undifferentiated tree.
 
-**Why it matters:** readers cannot tell which branch is theirs, so they browse instead of navigating.
+**Why it matters:** users can't tell which branch is theirs, so they browse instead of navigating.
 
 **Fix:** restructure around use versus build, with a shared reference layer. Proposed tree in Question 3.
 
@@ -32,7 +30,7 @@ On the Connectors overview, "Types of connectors" and "Ways to connect" both lin
 
 ### "What should I build: MCP, plugin, or both?" is buried
 
-This page answers the question a reader has *before* they know which primitive they need. It currently sits three levels deep inside Building connectors.
+This page answers the question a user has *before* they know which primitive they need. It currently sits three levels deep inside Building connectors.
 
 **Why it matters:** the decision guide is unreachable by the people who need it most.
 
@@ -42,7 +40,7 @@ This page answers the question a reader has *before* they know which primitive t
 
 There is no fixed shape for a task page or a context page, so no two are alike.
 
-**Why it matters:** beyond reader friction, inconsistent structure defeats retrieval. Predictable headings mean predictable chunk boundaries, so a question about limits returns a limits section rather than a paragraph from the middle of a build guide. This is the AEO argument, and it is also what makes conformance checkable.
+**Why it matters:** beyond user friction, inconsistent structure defeats retrieval. Predictable headings mean predictable chunk boundaries, so a question about limits returns a limits section rather than a paragraph from the middle of a build guide. This is the AEO argument, and it is also what makes conformance checkable.
 
 **Fix:** fixed templates per article type, enforced through Mintlify custom templates.
 
@@ -68,7 +66,7 @@ There is no fixed shape for a task page or a context page, so no two are alike.
 
 ### Navigation labels do not match page titles
 
-**Why it matters:** this is an accessibility failure under WCAG 2.4 AA, Consistent Identification. Users navigating by heading or landmark rely on link text matching the page title to confirm they landed in the right place. Readers with cognitive or memory disabilities are affected most.
+**Why it matters:** this is an accessibility failure under WCAG 2.4 AA, Consistent Identification. Users navigating by heading or landmark rely on link text matching the page title to confirm they landed in the right place. Users with cognitive or memory disabilities are affected most.
 
 **Fix:** navigation label and page title must match exactly.
 
@@ -91,7 +89,7 @@ There is no fixed shape for a task page or a context page, so no two are alike.
 - *Get started with connectors:* brief phrases, no intro.
 - *Submitting to the Connectors Directory:* headed "Before you start," complete sentences with an intro.
 
-**Why it matters:** readers learn the shape of a docs site and rely on it. Three shapes means checking each page from scratch.
+**Why it matters:** user learn the shape of a docs site and rely on it. Three shapes means checking each page from scratch.
 
 **Fix:** one heading name, one format, specified in the template.
 
@@ -99,7 +97,7 @@ There is no fixed shape for a task page or a context page, so no two are alike.
 
 The intro refers to the article as a tutorial and includes a "What you'll learn" list.
 
-**Why it matters:** the page tells the reader how to do something; it does not teach. Screen reader users encountering "tutorial" expect an actual learning module. The left-hand menu already provides the table of contents, so the bullet list is redundant.
+**Why it matters:** the page tells the user how to do something; it does not teach. Screen reader users encountering "tutorial" expect an actual learning module. The left-hand menu already provides the table of contents, so the bullet list is redundant.
 
 **Fix:** rewrite the intro along the lines of "This guide walks you through setting up and using Claude's connector integrations to enhance your workflow," and drop the list unless user data supports keeping it — in which case apply it everywhere.
 
@@ -107,7 +105,7 @@ The intro refers to the article as a tutorial and includes a "What you'll learn"
 
 Numbered lists appear where unordered lists are appropriate, for example under Desktop extensions > Enterprise deployment.
 
-**Why it matters:** scanning readers read a numbered list as steps. Using the convention loosely teaches readers to distrust it.
+**Why it matters:** scanning users read a numbered list as steps. Using the convention loosely teaches users to distrust it.
 
 **Fix:** ordered lists only for sequential steps.
 
@@ -123,7 +121,7 @@ The page is conceptual where its neighbors are procedural, and its closing "Gett
 
 ### Individual steps carry too much text
 
-In Remote MCP, step 2 under "Adding a request header" runs long enough that scanning readers skip it, despite containing information they need.
+In Remote MCP, step 2 under "Adding a request header" runs long enough that scanning users skip it, despite containing information they need.
 
 **Fix:** split the constraint out of the step and into a callout.
 
@@ -143,10 +141,10 @@ No pages should be deleted outright. Three merges:
 | What to build + Building custom connectors | One build overview |
 | Types of connectors + Ways to connect (sections on Connectors overview) | One decision table |
 
-### What happens to readers who land on the old URLs
+### What happens to users who land on the old URLs
 
 - For merges, keep the URL of the more visited page and 301 the other to it.
-- For merged sections, redirect to the anchor rather than the top of the page, so readers land on the content they came for.
+- For merged sections, redirect to the anchor rather than the top of the page, so users land on the content they came for.
 - Note renames and merges on the destination pages for roughly a month, since a redirect preserves traffic but not context.
 
 **Open question:** the Building custom connectors landing page may not survive as a page. Once transport, protocol features, and technical specifications move to Reference and testing becomes its own page, what remains is a link list. Resolving this needs the full page inventory.
