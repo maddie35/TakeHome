@@ -12,37 +12,29 @@ This audit covers the Connectors, Skills, and Plugins sections of claude.com/doc
 
 ## P0 — Costs user time
 
-### Navigation is organized by product offering, not user intent
+### a. Navigation is organized by product offering, not user intent
 
-The Connectors section splits into artifact categories rather than tasks. A user who wants to connect Gmail and a user who wants to ship an MCP server need almost nothing in common, but both land in the same undifferentiated tree.
+The Connectors section splits into product categories rather than tasks. A user who wants to connect Gmail and a user who wants to ship an MCP server both land in the same undifferentiated navigation tree.
 
-**Why it matters:** users can't tell which branch is theirs, so they browse instead of navigating.
+**Why it matters:** users can't tell which branch is theirs, so they browse or use Search instead of navigating.
 
-**Fix:** restructure around use versus build, with a shared reference layer. Proposed tree in Question 3.
+**Fix:** restructure around _use_ versus _build_, with a shared reference layer. Proposed information architecture tree towards the end of this page.
 
-### The same page appears under two categories
+### b. "What should I build: MCP, plugin, or both?" is buried
 
-On the Connectors overview, "Types of connectors" and "Ways to connect" both link to `/custom/remote-mcp`, under two different labels. Desktop extensions has the same problem.
+This page answers the question a user has before they know which type they need. It currently sits inside Building connectors, but third-party connectors section has building-related articles, meaning it's buried below those.
 
-**Why it matters:** the two axes are not mutually exclusive, which means the categories are not doing the work categories are supposed to do.
-
-**Fix:** merge both sections into one decision table with one row per option.
-
-### "What should I build: MCP, plugin, or both?" is buried
-
-This page answers the question a user has *before* they know which primitive they need. It currently sits three levels deep inside Building connectors.
-
-**Why it matters:** the decision guide is unreachable by the people who need it most.
+**Why it matters:** the decision guide is not visible enough for the people who need it.
 
 **Fix:** move it to the top of the build path.
 
-### Article structure is inconsistent across every page type
+### c. Article structure is inconsistent across every page type
 
-There is no fixed shape for a task page or a context page, so no two are alike.
+There's no template for a task page or a context page, so they're all structured differently.
 
-**Why it matters:** beyond user friction, inconsistent structure defeats retrieval. Predictable headings mean predictable chunk boundaries, so a question about limits returns a limits section rather than a paragraph from the middle of a build guide. This is the AEO argument, and it is also what makes conformance checkable.
+**Why it matters:** beyond user friction, inconsistent structure negatively impacts AEO (agentic engine optimization). Predictable headings mean predictable chunk boundaries, so a question about limits returns a limits section rather than a paragraph from the middle of a build guide. 
 
-**Fix:** fixed templates per article type, enforced through Mintlify custom templates.
+**Fix:** fixed templates per article type, enforced through Mintlify custom templates, such as:
 
 *Task and how-to articles:*
 1. Prerequisites (if applicable)
@@ -64,36 +56,36 @@ There is no fixed shape for a task page or a context page, so no two are alike.
 
 ## P1 — Causes confusion
 
-### Navigation labels do not match page titles
+### d. Navigation labels don't match page titles
 
-**Why it matters:** this is an accessibility failure under WCAG 2.4 AA, Consistent Identification. Users navigating by heading or landmark rely on link text matching the page title to confirm they landed in the right place. Users with cognitive or memory disabilities are affected most.
+**Why it matters:** this is an accessibility failure under WCAG 2.4 AA, Consistent Identification. Users navigating by heading or landmark rely on the link text matching the page title to confirm if they landed in the right place. Users with cognitive or memory disabilities are also affected by this issue.
 
 **Fix:** navigation label and page title must match exactly.
 
-### Terminology is used interchangeably without being defined as interchangeable
+### e. Terminology is used interchangeably without being defined as interchangeable
 
-"Third-party connectors" and "custom connectors" appear to refer to the same thing, but nothing says so.
+"Third-party connectors" and "custom connectors" appear to refer to the same thing, but nothing explicitly says so.
 
-**Fix:** pick one term per concept. Add a glossary covering MCP, MCP App, MCPB, and the connector types.
+**Fix:** pick one term per concept, or in the least, explicitly state "also called" in the article. Add a glossary covering MCP, MCP App, MCPB, and the connector types.
 
-### Article and section titles follow no convention
+### f. Article and section titles follow no convention
 
-- **Verb tense:** "Get started with connectors" against "Creating custom skills," both task articles.
+- **Verb tense:** "Get started with connectors" vs. "Creating custom skills," both task articles.
 - **Case:** some sections use title case, for example "Plugin Directory: Community vs. Anthropic Verified."
 
-**Fix:** sentence case throughout. Task titles start with a present-tense verb.
+**Fix:** sentence case throughout. Establish tilting convention, i.e., task titles start with a present-tense verb.
 
-### Prerequisites are formatted three ways
+### g. Prerequisites are formatted three ways
 
-- *Enterprise Managed Auth for connectors:* complete sentences with an intro line.
-- *Get started with connectors:* brief phrases, no intro.
-- *Submitting to the Connectors Directory:* headed "Before you start," complete sentences with an intro.
+- "Enterprise Managed Auth for connectors": complete sentences with an intro line.
+- "Get started with connectors": brief phrases, no intro.
+- "Submitting to the Connectors Directory": headed "Before you start," complete sentences with an intro.
 
-**Why it matters:** user learn the shape of a docs site and rely on it. Three shapes means checking each page from scratch.
+**Why it matters:** users (and AI agents) learn the shape of a docs site and rely on it. Three shapes means checking each page from scratch.
 
 **Fix:** one heading name, one format, specified in the template.
 
-### "Get started with connectors" calls itself a tutorial
+### h. "Get started with connectors" calls itself a tutorial
 
 The intro refers to the article as a tutorial and includes a "What you'll learn" list.
 
@@ -101,7 +93,7 @@ The intro refers to the article as a tutorial and includes a "What you'll learn"
 
 **Fix:** rewrite the intro along the lines of "This guide walks you through setting up and using Claude's connector integrations to enhance your workflow," and drop the list unless user data supports keeping it — in which case apply it everywhere.
 
-### Ordered lists are used for non-sequential content
+### i. Ordered lists are used for non-sequential content
 
 Numbered lists appear where unordered lists are appropriate, for example under Desktop extensions > Enterprise deployment.
 
