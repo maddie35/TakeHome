@@ -20,15 +20,7 @@ The Connectors section splits into product categories rather than tasks. A user 
 
 **Fix:** restructure around _use_ versus _build_, with a shared reference layer. Proposed information architecture tree towards the end of this page.
 
-### b. "What should I build: MCP, plugin, or both?" is buried
-
-This page answers the question a user has before they know which type they need. It currently sits inside Building connectors, but third-party connectors section has building-related articles, meaning it's buried below those.
-
-**Why it matters:** the decision guide is not visible enough for the people who need it.
-
-**Fix:** move it to the top of the build path.
-
-### c. Article structure is inconsistent across every page type
+### b. Article structure is inconsistent across every page type
 
 There's no template for a task page or a context page, so they're all structured differently.
 
@@ -51,6 +43,14 @@ There's no template for a task page or a context page, so they're all structured
 5. Security (if applicable)
 6. Availability (if applicable)
 7. Related articles
+
+### c. "What should I build: MCP, plugin, or both?" is buried
+
+This page answers the question a user has before they know which type they need. It currently sits inside Building connectors, but third-party connectors section has building-related articles, meaning it's buried below those.
+
+**Why it matters:** the decision guide is not visible enough for the people who need it.
+
+**Fix:** move it to the top of the build path.
 
 ---
 
@@ -93,33 +93,33 @@ The intro refers to the article as a tutorial and includes a "What you'll learn"
 
 **Fix:** rewrite the intro along the lines of "This guide walks you through setting up and using Claude's connector integrations to enhance your workflow," and drop the list unless user data supports keeping it — in which case apply it everywhere.
 
-### i. Ordered lists are used for non-sequential content
+### i. "Desktop extensions" is mostly context in a section of task pages
 
-Numbered lists appear where unordered lists are appropriate, for example under Desktop extensions > Enterprise deployment.
+The page is conceptual where the other articles in the section are more procedural. Also, its closing "Getting started" section has only 1 hyperlink.
 
-**Why it matters:** scanning users read a numbered list as steps. Using the convention loosely teaches users to distrust it.
-
-**Fix:** ordered lists only for sequential steps.
-
-### Desktop extensions is mostly context in a section of task pages
-
-The page is conceptual where its neighbors are procedural, and its closing "Getting started" section has no links out.
-
-**Fix:** add links to related resources such as Build a desktop extension with MCPB.
+**Fix:** restructure/reorder articles, and add hyperlinks to the Getting started resources, such as [Build a desktop extension with MCPB](https://claude.com/docs/connectors/building/mcpb).
 
 ---
 
 ## P2 — Polish
 
-### Individual steps carry too much text
+### j. Ordered lists used for non-sequential content
+
+Numbered lists sometimes appear where unordered lists should be used, for example, under Desktop extensions > Enterprise deployment.
+
+**Why it matters:** AI and scanning users read a numbered list as steps. Using the convention loosely teaches users to distrust it.
+
+**Fix:** ordered lists only for sequential steps.
+
+### k. Individual steps carry too much text
 
 In Remote MCP, step 2 under "Adding a request header" runs long enough that scanning users skip it, despite containing information they need.
 
-**Fix:** split the constraint out of the step and into a callout.
+**Fix:** split the constraint out of the step and into a callout, like this:
 
 > **2.** Select a header name from the list, or choose **Custom header** to enter a different name. The list offers standard authentication and routing header names, such as `authorization`, `x-api-key`, and `x-auth-token`, which every connector can use.
 >
-> > **Note:** Anthropic reviews and approves each custom header name before Claude sends it to a third-party server. This prevents the connector configuration from being used to send arbitrary header names. If you enter a header name that is not approved, Claude rejects the save with an error. To request approval for a custom header name, contact Claude support.
+> > **Important:** Anthropic reviews and approves each custom header name before Claude sends it to a third-party server. This prevents the connector configuration from being used to send arbitrary header names. If you enter a header name that is not approved, Claude rejects the save with an error. To request approval for a custom header name, contact Claude support.
 
 ---
 
@@ -135,11 +135,11 @@ No pages should be deleted outright. Three merges:
 
 ### What happens to users who land on the old URLs
 
-- For merges, keep the URL of the more visited page and 301 the other to it.
-- For merged sections, redirect to the anchor rather than the top of the page, so users land on the content they came for.
-- Note renames and merges on the destination pages for roughly a month, since a redirect preserves traffic but not context.
+- For merged pages, keep the URL of the more visited page and redirect the other to it.
+- For merged sections, redirect to the new section anchor so users land on the content they came for.
+- Note renames and merges on the destination pages for roughly a month.
 
-**Open question:** the Building custom connectors landing page may not survive as a page. Once transport, protocol features, and technical specifications move to Reference and testing becomes its own page, what remains is a link list. Resolving this needs the full page inventory.
+**Open question:** the Building custom connectors landing page may not survive as a page. Once transport, protocol features, and technical specifications move to Reference and testing becomes its own page, only a list of links may remain. Resolving this needs the full page inventory.
 
 ---
 
@@ -150,15 +150,24 @@ No pages should be deleted outright. Three merges:
 - Getting started
 - Use connectors
   - Prebuilt integrations (overview)
-  - Google integrations
+  - Google integrations > Drive, Gmail, Calendar
+  - Microsoft 365 integration
+  - Slack integration
+  - GitHub integration
   - Connectors directory
-  - Set up and authenticate
+  - Connector verification
+  - Set up and authenticate 
 - Build connectors
   - What to build (overview)
-  - Remote MCP servers
-  - MCP apps and bundles
-  - Submit to directory
-  - Testing
+  - Third-party connectors with remote MCP
+  - Desktop extensions > Build a desktop extension with MCPB
+  - MCP > Getting started, Design guidelines, Transparency and theming, Superseding older widgets, Cross-platform compatibility, External links, Troubleshooting
+  - Authentication > Enterprise Managed Auth for connectors, Lazy authentication for MCP servers
+  - Testing your connector
+  - Troubleshooting connectors
+  - Submit to directory > Pre-submission checklist, Submitting to the Connectors Directory
+  - Manage your listing after publishing
+  - Managing your directory listing
 - Reference
   - Limitations and constraints (from Building custom connectors, currently headed "Technical specifications")
   - Glossary
