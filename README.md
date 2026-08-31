@@ -1,4 +1,4 @@
-# Prototype: article-structure checker
+# Phase 3 prototype: article-structure checker
 
 Automated check for the Phase 1 problem "article structure is inconsistent"
 (and its title/heading corollaries), run against the live Connectors /
